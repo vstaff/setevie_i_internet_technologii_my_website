@@ -1,0 +1,82 @@
+div#artists-info-wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+div#artists-info-wrapper>* {
+    float: left;
+    padding: 10px;
+}
+
+div#artists-info-wrapper>div.side {
+    width: 25%;
+}
+
+div#artists-info-wrapper>div.side>div.artist-info-wrapper {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+div#artists-info-wrapper>div.side>div.artist-info-wrapper>* {
+    float: left;
+    width: 50%;
+}
+
+div#artists-info-wrapper>div.side>div.artist-info-wrapper>div.artist-info-image-wrapper>img {
+    width: 100%;
+}
+
+div#artists-info-wrapper>div.center-wrapper {
+    width: 50%;
+}
+
+div.center-wrapper {
+    overflow: hidden;
+}
+
+div.center-wrapper>h3 {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+div.center-wrapper>p.text,
+img {
+    float: left;
+}
+
+div.center-wrapper>p.text {
+    width: 25%;
+}
+
+div.center-wrapper>img {
+    width: calc(50% - 10px);
+}
+
+div.center-wrapper>p.text.first-text {
+    margin-right: 10px
+}
+
+div.center-wrapper>h3.top-title {
+    clear: both;
+}
+
+div.center-wrapper>table {
+    overflow: auto;
+    border-collapse: collapse;
+    margin-bottom:10px;
+}
+
+div.center-wrapper table td, div.center-wrapper table th {
+    border: 1px solid white;
+}
+
+div.center-wrapper a {
+    float:right;
+}

@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="./styles/global.css">
   <link rel="stylesheet" href="./styles/header.css">
   <link rel="stylesheet" href="./styles/gallery.css">
+  <link rel="stylesheet" href="./styles/columns.css">
+  <link rel="stylesheet" href="./styles/footer.css">
 </head>
 
 <body>
   <header>
     <div id="logo-wrapper">
-      <!-- <h1 class="header-text">Топ SoundCloud</h1> -->
     </div>
 
     <nav>
@@ -23,114 +24,200 @@
     </nav>
   </header>
 
-  <div id="gallery-wrapper" >
-    <div style="float:left;width:calc(9.857%/2);visibility: hidden;">a</div>
-    <img src="./public/artists/тёмный_принц2.png" alt="тёмный принц" width="36.143%" style="float:left">
-    <img src="./public/artists/madk1d.jpg" alt="madk1d" width="36.143%" style="float:left">
-    <img src="./public/artists/fortuna_812.jpg" alt="fortuna 812" width="17.857%">
-    <img src="./public/artists/tewiq.jpg" alt="tewiq" width="17.857%">
+  <div id="gallery-wrapper">
+    <div class="gallery-invisible-item">a</div>
+    <img src="./public/artists/greyrock.jpg" alt="greyrock" id="gallery-image-1">
+    <img src="./public/artists/madk1d.jpg" alt="madk1d" gallery-image-2>
+    <div id="vertical-artists-images-wrapper">
+      <img src="./public/artists/fortuna_812_2.png" alt="fortuna 812">
+      <img src="./public/artists/tewiq.jpg" alt="tewiq"> 
+    </div>
   </div>
 
-  <h3 class="text">Альбомы SoundCloud реперов</h3>
+  <div id="artists-info-wrapper">
+    <div class="side side-left">
+      <div class="artist-info-wrapper">
+        <div class="artist-info-text-wrapper">
+          <h3 class="text artist-info-title">kai angel - damage</h3>
 
-  <img src="./public/albums_covers/тёмный_принц/мрачные_треды.png" alt="тёмный принц - мрачные треды">
-  <h4 class="text">тёмный принц - мрачные треды</h4>
-  <p class="text">
-    Дебютный студийный альбом главной звезды
-    российской SoundCloud сцены -
-    тёмного принца вышедший в 2025 году - открыл
-    для массового слушателя
-    новое, ранее невиданное звучание
-  </p>
+          <ol class="text">
+            <li>are you happy</li>
+            <li>im all blessed the fuck up</li>
+            <li>basement</li>
+            <li>amy</li>
+            <li>mirrors</li>
+            <li>chelsea smile</li>
+            <li>444</li>
+            <li>parasocial freestyle</li>
+            <li>designer's paradise</li>
+            <li>fire walk with me</li>
+            <li>madam</li>
+            <li>sirens</li>
+            <li>slave to the rhythm</li>
+            <li>drive</li>
+            <li>welcome to forever</li>
+            <li>0 tears</li>
+            <li>damage</li>
+          </ol>
 
-  <h5 class="text">Треклист</h5>
-  <ol class="text">
-    <li>web 2.0 by тёмный принц (darkprinceee) &
-      silver gloria</li>
-    <li>#######</li>
-    <li>губы</li>
-    <li>вклубе</li>
-    <li>свалка (dump) by тёмный принц
-      (darkprinceee) & ashleyrossmith</li>
-    <li>автозаправка</li>
-    <li>французы</li>
-    <li>цветы</li>
-  </ol>
-  <hr>
+          <a class="text" href="#">Подробнее</a>
+        </div>
 
-  <img src="./public/albums_covers/madk1d/он_сказал_поехали!.png" alt="madk1d - он сказал поехали!">
-  <h4 class="text">madk1d - Он сказал поехали!</h4>
-  <p class="text">
-    Как говорил сам madk1d -
-    "альбом писался долго, где то с июня я собирал треки, «мориарти», «самый лучший трудовик» и тд, но мне кажется что
-    это не альбом а просто солянка из муд треков, изначально даже концепция была но позже отказался от нее в угоду
-    продуктивности".
-    Действительно альбом получился разношерстные
-    - как в плане звучания, так и текстового
-    содержания
-  </p>
+        <div class="artist-info-image-wrapper">
+          <img src="./public/albums_covers/kai_angel/damage.png" alt="kai angel - damage">
+        </div>
+      </div>
 
-  <h5 class="text">Треклист</h5>
-  <ol class="text">
-    <li>типичная ситуация</li>
-    <li>1 мая (feat. CUPSIZE)</li>
-    <li>самый лучший трудовик</li>
-    <li>грустная история</li>
-    <li>незаконно (feat. голодный)</li>
-    <li>number 9</li>
-    <li>заправка</li>
-    <li>типичная ситуация (acoustic
-      version)</li>
-    <li>мориарти</li>
-  </ol>
-  <hr>
+      <div class="artist-info-wrapper">
+        <div class="artist-info-text-wrapper">
+          <h3 class="text artist-info-title">madk1d - Он сказал поехали!</h3>
 
-  <img src="./public/albums_covers/FORTUNA_812/basedgod.png" alt="FORTUNA 812 - basedgod">
-  <h4 class="text">FORTUNA 812 - basedgod</h4>
-  <p class="text">
-    Второй студийный альбом FORTUN'ы, состоящий
-    из 13 треков, 7 из которых выходили ранее,
-    до альбома. На фитах тёмный принц и Jessie
-    Luck. Альбом можно разделить на 2 части:
-  </p>
-  <ul class="text">
-    <li>
-      1 часть — с трека intronett до трека
-      loro piana. Эта часть более агрессивная
-      и сделана в стиле Electronic Trap.
-    </li>
-    <li>
-      2 часть — с трека flexy supra до трека
-      dirty like my soul. Эта часть более
-      спокойная, в отличии от первой части и
-      выполнена уже в реп звучании.
-    </li>
-  </ul>
+          <ol class="text">
+            <li>типичная ситуация</li>
+            <li>1 мая (feat. CUPSIZE)</li>
+            <li>самый лучший трудовик</li>
+            <li>грустная история</li>
+            <li>незаконно (feat. голодный)</li>
+            <li>number 9</li>
+            <li>заправка</li>
+            <li>типичная ситуация (acoustic
+              version)</li>
+            <li>мориарти</li>
+          </ol>
 
-  <h5 class="text">Треклист</h5>
-  <ol class="text">
-    <li>intronett</li>
-    <li>
-      ТАК УМИРАЛИ ДЕНЬГИ (TIHMWD) by FORTUNA
-      812 & BOSSFIGHT DUBSTEP CEO
-    </li>
-    <li>fckwrld</li>
-    <li>top model</li>
-    <li>king of NY</li>
-    <li>gotham</li>
-    <li>ww basedgod life</li>
-    <li>lora piana</li>
-    <li>flexy supra</li>
-    <li>темный принц (feat. тёмный принц)</li>
-    <li>feel this pain</li>
-    <li>jessie (feat. Jessie Luck)</li>
-    <li>dirty like my soul</li>
-  </ol>
-  <hr>
+          <a class="text" href="#">Подробнее</a>
+        </div>
 
-  <p align="right" class="text">
-    выполнил: Кон Владислав (группа: Б9123-09.03.04(1))
-  </p>
+        <div class="artist-info-image-wrapper">
+          <img src="./public/albums_covers/madk1d/он_сказал_поехали!.png" alt="тёмный принц - мрачные треды">
+        </div>
+      </div>
+    </div>
+
+    <div class="center-wrapper">
+      <h3 class="text artist-name">тёмный принц</h3>
+
+      <p class="text first-text">Российский рэп-исполнитель и продюсер. Музыкальную карьеру начал в марте
+        2024 года. Также он имеет альтер-эго ashleyrossmith. Музыкальная карьера Артема Бондарева началась в достаточно
+        юном возрасте. Он дебютировал как битмейкер еще в 2020-м, сначала под ником Jonathan Blad, потом — origon,
+        причем работал с такими артистами, как LOVV66 и BUSHIDO ZHO. Его продакшен быстро выделился: внимание к
+        структуре, острота аранжировок, авторский почерк.
+
+      </p>
+      <p class="text">Темный принц влетел на сцену, словно вспышка. Артист с загадочным образом и резким саундом
+        стремительно ворвался в поле русскоязычного SoundCloud-рэпа. Ему хватило нескольких релизов, чтобы стать ярким
+        представителем новой волны. Музыка принца — напряженный сплав мрачной лирики, густого звука, плотных битов и
+        нарочитой жанровой гибкости. Он сразу задал высокую планку и стал одним из наиболее обсуждаемых имен в цифровом
+        андеграунде.
+      </p>
+
+      <img src="./public/artists/тёмный_принц2.png" alt="тёмный принц">
+
+      <h3 class="text top-title">Чарт</h3>
+
+      <table width="100%">
+        <thead>
+          <tr>
+            <th class="text" >Альбом</th>
+            <th class="text" >Артист</th>
+            <th class="text" >Прослушивания на Яндекс.Музыка</th>
+            <th class="text" >Прослушиваний на SoundCloud</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="text">flexyswag</td>
+            <td class="text">madk1d</td>
+            <td class="text">453481</td>
+            <td class="text">19849</td>
+          </tr>
+          <tr>
+            <td class="text">Он сказал поехали!</td>
+            <td class="text">madk1d</td>
+            <td class="text">150136</td>
+            <td class="text">160998</td>
+          </tr>
+
+          <tr>
+            <td class="text">Мрачные треды</td>
+            <td class="text">тёмный принц</td>
+            <td class="text">85185</td>
+            <td class="text">102271</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <a href="#" class="text">Подробнее...</a>
+    </div>
+
+    <div class="side side-right">
+      <div class="artist-info-wrapper">
+        <div class="artist-info-text-wrapper">
+          <h3 class="text artist-info-title">FORTUNA 812 - basedgod</h3>
+
+          <ol class="text">
+            <li>intronett</li>
+            <li>
+              ТАК УМИРАЛИ ДЕНЬГИ (TIHMWD) by FORTUNA
+              812 & BOSSFIGHT DUBSTEP CEO
+            </li>
+            <li>fckwrld</li>
+            <li>top model</li>
+            <li>king of NY</li>
+            <li>gotham</li>
+            <li>ww basedgod life</li>
+            <li>lora piana</li>
+            <li>flexy supra</li>
+            <li>темный принц (feat. тёмный принц)</li>
+            <li>feel this pain</li>
+            <li>jessie (feat. Jessie Luck)</li>
+            <li>dirty like my soul</li>
+          </ol>
+
+          <a class="text" href="#">Подробнее</a>
+        </div>
+
+        <div class="artist-info-image-wrapper">
+          <img src="./public/albums_covers/FORTUNA_812/basedgod.png" alt="тёмный принц - мрачные треды">
+        </div>
+      </div>
+
+      <div class="artist-info-wrapper">
+        <div class="artist-info-text-wrapper">
+          <h3 class="text artist-info-title">madk1d - ****swag</h3>
+
+          <ol class="text">
+            <li>так по***</li>
+            <li>цена (feat. паранойя)</li>
+            <li>ты че обиделась (feat. тёмный принц)</li>
+            <li>супермаркет</li>
+            <li>засосы</li>
+            <li>****swag2010</li>
+            <li>сдвг</li>
+            <li>последним летом (feat. GRILLYAZH)</li>
+            <li>танцор</li>
+          </ol>
+
+          <a class="text" href="#">Подробнее</a>
+        </div>
+
+        <div class="artist-info-image-wrapper">
+          <img src="./public/albums_covers/madk1d/sexyswag.png" alt="тёмный принц - мрачные треды">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="text">
+      выполнил: Кон Владислав (группа: Б9123-09.03.04(1))
+    </p>
+
+    <p class="text">
+      год разработки: 2025
+    </p>
+  </footer>
 </body>
 
 </html>

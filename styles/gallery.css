@@ -1,6 +1,27 @@
 div#gallery-wrapper {
     overflow: hidden;
-    width: 80%;
+    width: 88%;
     margin-left: auto;
     margin-right: auto;
+}
+
+div#gallery-wrapper>.gallery-invisible-item {
+    float: left;
+    width: 6.25%;
+    visibility: hidden;
+}
+
+div#gallery-wrapper>img {
+    float: left;
+    width: 35%;
+}
+
+div#gallery-wrapper>div#vertical-artists-images-wrapper {
+    float: left;
+    width: 17.5%;
+}
+
+div#gallery-wrapper>div#vertical-artists-images-wrapper>img {
+    display: block;
+    width:100%;
 }

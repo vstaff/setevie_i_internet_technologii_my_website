@@ -1,6 +1,8 @@
 header {
     background-color: #121420;
     overflow: hidden;
+    position:sticky;
+    top:0;
 }
 
 header a {
@@ -48,5 +50,5 @@ header > nav > .nav-item.last-nav-item {
 }
 
 header > nav > .current-page {
-    background-color: #B76D68;
+    background-color: #f27022;
 }
