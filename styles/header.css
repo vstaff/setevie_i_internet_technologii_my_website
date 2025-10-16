@@ -1,0 +1,46 @@
+header {
+    background-color: #121420;
+    overflow: hidden;
+}
+
+header a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header > * {
+    float: left;
+}
+
+header > nav {
+    float: right;
+}
+
+header .header-text {
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+
+header > #logo-wrapper {
+    width: 30%;
+    padding: 5px 0;
+}
+
+header > nav {
+    overflow: hidden;
+    width: 70%;
+}
+
+header > nav > .nav-item {
+    border-right: 1px solid whitesmoke;
+    padding: 5px 20px;
+    float: right;
+}
+
+header > nav > .nav-item.last-nav-item {
+    border-right: none;
+}
+
+header > nav > .current-page {
+    background-color: #B76D68;
+}
