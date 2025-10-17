@@ -1,12 +1,12 @@
 div#gallery-wrapper {
     overflow: hidden;
     width: 88%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 40px;
 }
 
 div#gallery-wrapper>.gallery-invisible-item {
     float: left;
+    /* display: none; */
     width: 6.25%;
     visibility: hidden;
 }
@@ -14,14 +14,26 @@ div#gallery-wrapper>.gallery-invisible-item {
 div#gallery-wrapper>img {
     float: left;
     width: 35%;
+    border-right:2px solid #f27022;
+    border-bottom:2px solid #f27022;
+}
+
+div#gallery-wrapper>div#vertical-artists-images-wrapper {
+    /* height: 441.36px; */
+}
+
+div#gallery-wrapper>div#vertical-artists-images-wrapper>img#gallery-image-3, div#gallery-wrapper>div#vertical-artists-images-wrapper>img#gallery-image-4 {
+    height:50%;
 }
 
 div#gallery-wrapper>div#vertical-artists-images-wrapper {
     float: left;
-    width: 17.5%;
+    width: calc(17.5% - 2px);
+    width: 30%; 
 }
 
 div#gallery-wrapper>div#vertical-artists-images-wrapper>img {
     display: block;
     width:100%;
+    border-bottom: 2px solid #f27022;
 }

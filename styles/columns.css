@@ -18,14 +18,30 @@ div#artists-info-wrapper>div.side {
     width: 25%;
 }
 
+div#artists-info-wrapper>div.side.side-left {
+    border-right: 1px solid #f27022;
+}
+
+div#artists-info-wrapper>div.side.side-right {
+    border-left:1px solid #f27022;
+}
+
 div#artists-info-wrapper>div.side>div.artist-info-wrapper {
     overflow: hidden;
     margin-bottom: 30px;
 }
 
+div#artists-info-wrapper>div.side>div.artist-info-wrapper.last-wrapper {
+    margin-bottom:0;
+}
+
 div#artists-info-wrapper>div.side>div.artist-info-wrapper>* {
     float: left;
-    width: 50%;
+    width: calc(50% - 10px);
+}
+
+div#artists-info-wrapper>div.side>div.artist-info-wrapper>.left-piece {
+    margin-right: 10px;
 }
 
 div#artists-info-wrapper>div.side>div.artist-info-wrapper>div.artist-info-image-wrapper>img {
@@ -36,45 +52,61 @@ div#artists-info-wrapper>div.center-wrapper {
     width: 50%;
 }
 
-div.center-wrapper {
+div.center-wrapper>div#main-artist-info {
+    margin-bottom:50px;
     overflow: hidden;
 }
 
-div.center-wrapper>h3 {
+div.center-wrapper>div#main-artist-info>h3 {
     width: 100%;
     margin-bottom: 10px;
     text-align: center;
 }
 
-div.center-wrapper>p.text,
+div.center-wrapper>div#main-artist-info>p.text,
 img {
     float: left;
 }
 
-div.center-wrapper>p.text {
+div.center-wrapper>div#main-artist-info>p.text {
     width: 25%;
 }
 
-div.center-wrapper>img {
+div.center-wrapper>div#main-artist-info>img {
     width: calc(50% - 10px);
 }
 
-div.center-wrapper>p.text.first-text {
+div.center-wrapper>div#main-artist-info>p.text.first-text {
     margin-right: 10px
 }
 
-div.center-wrapper>h3.top-title {
-    clear: both;
+div.center-wrapper>div#main-artist-info>p.text.second-text>a {
+    display: block;;
+    margin-top:10px;
 }
 
-div.center-wrapper>table {
+div.center-wrapper>div#main-artist-info>p.text.second-text>a.text {
+    display:inline-block;
+    width:100%;
+    text-align: left;
+}
+
+div.center-wrapper>div#top-short-wrapper>h3 {
+    text-align:center;
+    margin-bottom:20px;
+
+}
+
+div.center-wrapper>div#top-short-wrapper>table {
+    width:100%;
     overflow: auto;
     border-collapse: collapse;
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 
-div.center-wrapper table td, div.center-wrapper table th {
+div.center-wrapper>div#top-short-wrapper>table td, div.center-wrapper>div#top-short-wrapper>table th {
     border: 1px solid white;
+    padding:2px;
 }
 
 div.center-wrapper a {

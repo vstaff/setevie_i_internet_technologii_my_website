@@ -1,941 +1,866 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Топ SoundCloud реперов - Чарт</title>
-  <link rel="stylesheet" href="./styles/global.css">
-  <link rel="stylesheet" href="./styles/header.css">
+  <link href="./styles/global.css" rel="stylesheet" />
+  <link href="./styles/header.css" rel="stylesheet" />
+  <link href="./styles/footer.css" rel="stylesheet" />
 </head>
 
 <body>
   <header>
     <div id="logo-wrapper">
-      <!-- <h1 class="header-text">Топ SoundCloud</h1> -->
     </div>
-
     <nav>
-      <h2 class="nav-item last-nav-item header-text"><a href="./teminiy_prince.html">Артист месяца</a></h2>
-      <h2 class="current-page nav-item header-text"><a href="./top_soundcloud_rappers.html">Чарт</a></h2>
-      <h2 class="nav-item header-text"><a href="./index.html">Главная</a></h2>
+      <h2 class="text nav-item last-nav-item header-text"><a class="text" href="./teminiy_prince.html">Артист месяца</a>
+      </h2>
+      <h2 class="current-page text nav-item header-text"><a class="text" href="./top_soundcloud_rappers.html">Чарт</a>
+      </h2>
+      <h2 class="text nav-item header-text"><a class="text" href="./index.html">Главная</a></h2>
     </nav>
   </header>
-  
-  <h3>Чарт SoundCloud реперов</h3>
 
-  <details>
-    <summary>График</summary>
-
-    <form action="#">
-      <fieldset>
-        <legend>Значение по оси OX</legend>
-
-        <label for="artist">Артист</label>
-        <input type="radio" name="x-axis" value="artist" id="artist">
-
-        <label for="genre">Жанр</label>
-        <input type="radio" name="x-axis" value="genre" id="genre">
-
-        <label for="country">Страна</label>
-        <input type="radio" name="x-axis" value="country" id="country">
-      </fieldset>
-
-      <fieldset>
-        <legend>Значение по оси OY</legend>
-
-        <label for="yandex_music">Суммарно прослушиваний на Яндекс.Музыка за месяц</label>
-        <input type="checkbox" name="y-axis" value="yandex_music" id="yandex_music">
-        <br>
-
-        <label for="soundcloud">Суммарно прослушиваний на SoundCloud за месяц</label>
-        <input type="checkbox" name="y-axis" value="soundcloud" id="soundcloud">
-
-        <label for="average">В среднем прослушиваний за месяц</label>
-        <input type="checkbox" name="y-axis" value="average" id="average">
-        <br>
-      </fieldset>
-
-      <input type="submit" value="Построить">
-
-      <p>Здесь будет ваш график...</p>
-    </form>
-  </details>
-
-  <details>
-    <summary>Фильтр</summary>
-
-    <form action="#">
-      <p>
-        <label for="artist_filter">От Артиста: </label>
-        <input type="text" name="artist_filter" id="artist_filter">
-      </p>
-
-      <p>
-        <label for="album_filter">Альбом: </label>
-        <input type="text" name="album_filter" id="album_filter">
-      </p>
-
-      <p>
-        <label for="genre_filter">Жанр(-ы): </label>
-        <input type="text" name="genre_filter" id="genre_filter">
-      </p>
-
-      <p>
-        <label for="country_filter">Страна: </label>
-        <input type="text" name="country_filter" id="country_filter">
-      </p>
-
-      <p>
-        <label for="yandex_music_streams_from">Прослушиваний на Яндекс.Музыка от: </label>
-        <input type="number" name="yandex_music_streams_from" id="yandex_music_streams_from">
-
-        <label for="yandex_music_streams_to">до: </label>
-        <input type="number" name="yandex_music_streams_to" id="yandex_music_streams_to">
-      </p>
-
-      <p>
-        <label for="soundcloud_streams_from">Прослушиваний на SoundCloud от: </label>
-        <input type="number" name="soundcloud_streams_from" id="soundcloud_streams_from">
-
-        <label for="soundcloud_streams_to">до: </label>
-        <input type="number" name="soundcloud_streams_to" id="soundcloud_streams_to">
-      </p>
-
-      <p>
-        <label for="rhymes_images_from">Рифмы/Образы от: </label>
-        <input type="number" name="rhymes_images_from" id="rhymes_images_from">
-
-        <label for="rhymes_images_to">до: </label>
-        <input type="number" name="rhymes_images_to" id="rhymes_images_to">
-      </p>
-
-      <p>
-        <label for="structure_rhythmic_from">Структура/Ритмика от: </label>
-        <input type="number" name="structure_rhythmic_from" id="structure_rhythmic_from">
-
-        <label for="structure_rhythmic_to">до: </label>
-        <input type="number" name="structure_rhythmic_to" id="structure_rhythmic_to">
-      </p>
-
-      <p>
-        <label for="style_from">Реализация стиля от: </label>
-        <input type="number" name="style_from" id="style_from">
-
-        <label for="style_to">до: </label>
-        <input type="number" name="style_to" id="style_to">
-      </p>
-
-      <p>
-        <label for="uniqueness_from">Индивидуальность/Харизма от: </label>
-        <input type="number" name="uniqueness_from" id="uniqueness_from">
-
-        <label for="uniqueness_to">до: </label>
-        <input type="number" name="uniqueness_to" id="uniqueness_to">
-      </p>
-
-      <p>
-        <label for="vibe_from">Атмосфера/Вайб от: </label>
-        <input type="number" name="vibe_from" id="vibe_from">
-
-        <label for="vibe_to">до: </label>
-        <input type="number" name="vibe_to" id="vibe_to">
-      </p>
-
-      <input type="submit" value="Найти">
-    </form>
-  </details>
-
-  <details>
-    <summary>Сортировка</summary>
-
-    <form action="#">
-      <p>
-        <label for="level_1">Первый уровень: </label>
-        <select name="level_1" id="level_1">
-          <option value="level_1_no">Нет</option>
-          <option value="level_1_album">Альбом</option>
-          <option value="level_1_artist">Артист</option>
-          <option value="level_1_genre">Жанр</option>
-          <option value="level_1_country">Страна</option>
-          <option value="level_1_yandex_music_streams">Прослушиваний на Яндекс.Музыка</option>
-          <option value="level_1_soundcloud_streams">Прослушиваний на SoundCloud</option>
-          <option value="level_1_rhymes_images_option">Рифмы/Образы</option>
-          <option value="level_1_structure_rhythmic_option">Структура/Ритмика</option>
-          <option value="level_1_style_option">Реализация стиля</option>
-          <option value="level_1_uniqueness_option">Индивидуальность/Харизма</option>
-          <option value="level_1_vibe_option">Атмосфера/Вайб</option>
-        </select>
-
-        <label for="level_1_decreasing">По убыванию</label>
-        <input type="checkbox" name="level_1_decreasing" id="level_1_decreasing" value="level_1_decreasing">
-      </p>
-
-      <p>
-        <label for="level_2">Второй уровень: </label>
-        <select name="level_2" id="level_2">
-          <option value="level_2_no">Нет</option>
-          <option value="level_2_album">Альбом</option>
-          <option value="level_2_artist">Артист</option>
-          <option value="level_2_genre">Жанр</option>
-          <option value="level_2_country">Страна</option>
-          <option value="level_2_yandex_music_streams">Прослушиваний на Яндекс.Музыка</option>
-          <option value="level_2_soundcloud_streams">Прослушиваний на SoundCloud</option>
-          <option value="level_2_rhymes_images_option">Рифмы/Образы</option>
-          <option value="level_2_structure_rhythmic_option">Структура/Ритмика</option>
-          <option value="level_2_style_option">Реализация стиля</option>
-          <option value="level_2_uniqueness_option">Индивидуальность/Харизма</option>
-          <option value="level_2_vibe_option">Атмосфера/Вайб</option>
-        </select>
-
-        <label for="level_2_decreasing">По убыванию</label>
-        <input type="checkbox" name="level_2_decreasing" id="level_2_decreasing" value="level_2_decreasing">
-      </p>
-
-      <p>
-        <label for="level_3">Третий уровень: </label>
-        <select name="level_3" id="level_3">
-          <option value="level_3_no">Нет</option>
-          <option value="level_3_album">Альбом</option>
-          <option value="level_3_artist">Артист</option>
-          <option value="level_3_genre">Жанр</option>
-          <option value="level_3_country">Страна</option>
-          <option value="level_3_yandex_music_streams">Прослушиваний на Яндекс.Музыка</option>
-          <option value="level_3_soundcloud_streams">Прослушиваний на SoundCloud</option>
-          <option value="level_3_rhymes_images_option">Рифмы/Образы</option>
-          <option value="level_3_structure_rhythmic_option">Структура/Ритмика</option>
-          <option value="level_3_style_option">Реализация стиля</option>
-          <option value="level_3_uniqueness_option">Индивидуальность/Харизма</option>
-          <option value="level_3_vibe_option">Атмосфера/Вайб</option>
-        </select>
-
-        <label for="level_3_decreasing">По убыванию</label>
-        <input type="checkbox" name="level_3_decreasing" id="level_3_decreasing" value="level_3_decreasing">
-      </p>
-
-      <input type="submit" value="Сортировать">
-    </form>
-  </details>
-
-  <table width="100%" border="1">
-    <thead>
-      <tr>
-        <th>Название альбома</th>
-        <th>Артист</th>
-        <th>Жанр</th>
-        <th>Страна</th>
-
-        <th>Прослушивания на Яндекс.Музыка</th>
-        <th>Прослушиваний на SoundCloud</th>
-        <!-- <th colspan="5">Оценка альбома</th> -->
-        <th>Рифмы/Образы</th>
-        <th>Структура/Ритмика</th>
-        <th>Реализация стиля</th>
-        <th>Индивидуальность/харизма</th>
-        <th>Атмосфера/вайб</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>flexyswag</td>
-        <td>madk1d</td>
-        <td>архивкор</td>
-        <td>Россия</td>
-        <td>453481</td>
-        <td>19849</td>
-        <td>0</td>
-        <td>6</td>
-        <td>1</td>
-        <td>0</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>Он сказал поехали!</td>
-        <td>madk1d</td>
-        <td>архивкор</td>
-        <td>Россия</td>
-
-        <td>150136</td>
-        <td>160998</td>
-        <td>6</td>
-        <td>3</td>
-        <td>9</td>
-        <td>8</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>Мрачные треды</td>
-        <td>тёмный принц</td>
-        <td>архивкор</td>
-        <td>Россия</td>
-
-        <td>85185</td>
-        <td>102271</td>
-        <td>4</td>
-        <td>3</td>
-        <td>10</td>
-        <td>10</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>defect (EP)</td>
-        <td>greyrock</td>
-        <td>архивкор</td>
-        <td>Россия</td>
-
-        <td>355803</td>
-        <td>127377</td>
-        <td>8</td>
-        <td>3</td>
-        <td>7</td>
-        <td>2</td>
-        <td>7</td>
-      </tr>
-      <tr>
-        <td>Project n(o)va</td>
-        <td>FORTUNA 812</td>
-        <td>архивкор;дарк треп</td>
-        <td>Россия</td>
-
-        <td>42022</td>
-        <td>480645</td>
-        <td>5</td>
-        <td>8</td>
-        <td>1</td>
-        <td>3</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>basedgod</td>
-        <td>FORTUNA 812</td>
-        <td>архивкор;дарк треп</td>
-        <td>Россия</td>
-
-        <td>43536</td>
-        <td>32810</td>
-        <td>8</td>
-        <td>9</td>
-        <td>9</td>
-        <td>1</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>саундклауд пак</td>
-        <td>урал гайсин</td>
-        <td>архивкор</td>
-        <td>Казахстан</td>
-        <td>199560</td>
-        <td>179544</td>
-        <td>9</td>
-        <td>3</td>
-        <td>9</td>
-        <td>6</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>я истекаю кровью (EP)</td>
-        <td>урал гайсин</td>
-        <td>архивкор</td>
-        <td>Казахстан</td>
-        <td>147277</td>
-        <td>203764</td>
-        <td>10</td>
-        <td>9</td>
-        <td>5</td>
-        <td>2</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>GOD SYSTEM</td>
-        <td>Kai Angel</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>318863</td>
-        <td>55924</td>
-        <td>2</td>
-        <td>1</td>
-        <td>10</td>
-        <td>7</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>Angel May Cry 2</td>
-        <td>Kai Angel</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>361752</td>
-        <td>377397</td>
-        <td>9</td>
-        <td>4</td>
-        <td>0</td>
-        <td>2</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Angel May Cry</td>
-        <td>Kai Angel</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>128695</td>
-        <td>44076</td>
-        <td>8</td>
-        <td>4</td>
-        <td>6</td>
-        <td>2</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>damage</td>
-        <td>Kai Angel</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>117928</td>
-        <td>491884</td>
-        <td>1</td>
-        <td>7</td>
-        <td>6</td>
-        <td>5</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>immortal</td>
-        <td>Kai Angel</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>281762</td>
-        <td>447440</td>
-        <td>8</td>
-        <td>4</td>
-        <td>4</td>
-        <td>6</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>MARILYN MANSON</td>
-        <td>Kai Angel</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>169641</td>
-        <td>96498</td>
-        <td>1</td>
-        <td>10</td>
-        <td>10</td>
-        <td>5</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>kAiCoRe</td>
-        <td>Kai Angel</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>170396</td>
-        <td>331501</td>
-        <td>2</td>
-        <td>10</td>
-        <td>5</td>
-        <td>0</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>Heavy Metal 2</td>
-        <td>Kai Angel & 9mice</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>312133</td>
-        <td>81614</td>
-        <td>2</td>
-        <td>10</td>
-        <td>6</td>
-        <td>9</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>Heavy Metal</td>
-        <td>Kai Angel & 9mice</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>221762</td>
-        <td>71701</td>
-        <td>7</td>
-        <td>0</td>
-        <td>10</td>
-        <td>5</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>ORPHEUS</td>
-        <td>9mice</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>98436</td>
-        <td>312677</td>
-        <td>3</td>
-        <td>9</td>
-        <td>5</td>
-        <td>10</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>ASPHALT</td>
-        <td>9mice</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>49991</td>
-        <td>28791</td>
-        <td>8</td>
-        <td>1</td>
-        <td>3</td>
-        <td>5</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>9MM</td>
-        <td>9mice</td>
-        <td>viperr;opium</td>
-        <td>США</td>
-
-        <td>204353</td>
-        <td>381481</td>
-        <td>3</td>
-        <td>1</td>
-        <td>9</td>
-        <td>0</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>Fluddality</td>
-        <td>GONE.Fludd</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-        
-        <td>347773</td>
-        <td>477934</td>
-        <td>0</td>
-        <td>7</td>
-        <td>1</td>
-        <td>3</td>
-        <td>9</td>
-      </tr>
-      <tr>
-        <td>BOYS DON’T CRY</td>
-        <td>GONE.Fludd</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>46492</td>
-        <td>255316</td>
-        <td>6</td>
-        <td>5</td>
-        <td>1</td>
-        <td>5</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>СУПЕРЧУИТС</td>
-        <td>GONE.Fludd</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>191387</td>
-        <td>292274</td>
-        <td>7</td>
-        <td>0</td>
-        <td>9</td>
-        <td>1</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>VOODOO CHILD</td>
-        <td>GONE.Fludd</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>399455</td>
-        <td>110761</td>
-        <td>4</td>
-        <td>0</td>
-        <td>9</td>
-        <td>1</td>
-        <td>9</td>
-      </tr>
-      <tr>
-        <td>DIGITAL FANTAZY</td>
-        <td>GONE.Fludd</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>334482</td>
-        <td>126117</td>
-        <td>8</td>
-        <td>8</td>
-        <td>2</td>
-        <td>1</td>
-        <td>7</td>
-      </tr>
-      <tr>
-        <td>Pink Phloyd</td>
-        <td>Pharaoh</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>489973</td>
-        <td>300887</td>
-        <td>1</td>
-        <td>3</td>
-        <td>8</td>
-        <td>7</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <td>Плакшери</td>
-        <td>Pharaoh</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>116558</td>
-        <td>468148</td>
-        <td>7</td>
-        <td>4</td>
-        <td>7</td>
-        <td>7</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>Платина</td>
-        <td>Платина</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>25115</td>
-        <td>303392</td>
-        <td>8</td>
-        <td>3</td>
-        <td>7</td>
-        <td>9</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Опиаты Круг</td>
-        <td>Платина</td>
-        <td>хип-хоп;рэп;рнб</td>
-        <td>Россия</td>
-
-        <td>276927</td>
-        <td>235798</td>
-        <td>7</td>
-        <td>3</td>
-        <td>7</td>
-        <td>5</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td>Sosa Muzik</td>
-        <td>Платина</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>15088</td>
-        <td>199335</td>
-        <td>7</td>
-        <td>4</td>
-        <td>8</td>
-        <td>4</td>
-        <td>7</td>
-      </tr>
-      <tr>
-        <td>Сладких снов</td>
-        <td>Платина</td>
-        <td>хип-хоп;рэп;рнб</td>
-        <td>Россия</td>
-
-        <td>25307</td>
-        <td>34026</td>
-        <td>10</td>
-        <td>2</td>
-        <td>0</td>
-        <td>2</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>РНБ КЛУБ</td>
-        <td>Платина</td>
-        <td>хип-хоп;рэп;рнб</td>
-        <td>Россия</td>
-
-        <td>255099</td>
-        <td>86811</td>
-        <td>2</td>
-        <td>8</td>
-        <td>2</td>
-        <td>7</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>Классика</td>
-        <td>Джон Гарик</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>24776</td>
-        <td>487448</td>
-        <td>1</td>
-        <td>8</td>
-        <td>0</td>
-        <td>8</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td>Шансун</td>
-        <td>Джон Гарик</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>333580</td>
-        <td>40038</td>
-        <td>7</td>
-        <td>0</td>
-        <td>3</td>
-        <td>4</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <td>Ядик</td>
-        <td>Джон Гарик</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>45149</td>
-        <td>448389</td>
-        <td>4</td>
-        <td>3</td>
-        <td>10</td>
-        <td>5</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td>Never Broke Again</td>
-        <td>xxxmanera</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>440657</td>
-        <td>206481</td>
-        <td>10</td>
-        <td>10</td>
-        <td>4</td>
-        <td>4</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <td>HUNNID: GATEKEEPING</td>
-        <td>xxxmanera</td>
-        <td>хип-хоп;рэп;rage</td>
-        <td>Россия</td>
-
-        <td>182407</td>
-        <td>325111</td>
-        <td>5</td>
-        <td>0</td>
-        <td>5</td>
-        <td>5</td>
-        <td>7</td>
-      </tr>
-      <tr>
-        <td>exxxtract vol. 1</td>
-        <td>xxxmanera</td>
-        <td>хип-хоп;рэп;rage</td>
-        <td>Россия</td>
-
-        <td>232476</td>
-        <td>381281</td>
-        <td>3</td>
-        <td>8</td>
-        <td>10</td>
-        <td>4</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>Project V</td>
-        <td>Voskresenskii</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>486839</td>
-        <td>125536</td>
-        <td>1</td>
-        <td>3</td>
-        <td>4</td>
-        <td>4</td>
-        <td>7</td>
-      </tr>
-      <tr>
-        <td>Как испортить вечеринку?</td>
-        <td>CUPSIZE</td>
-        <td>гранж;рок</td>
-        <td>Россия</td>
-
-        <td>418420</td>
-        <td>493171</td>
-        <td>2</td>
-        <td>4</td>
-        <td>10</td>
-        <td>3</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>… меня малышка</td>
-        <td>CUPSIZE</td>
-        <td>гранж;рок;hyperpop</td>
-        <td>Россия</td>
-
-        <td>327495</td>
-        <td>171425</td>
-        <td>8</td>
-        <td>10</td>
-        <td>8</td>
-        <td>10</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td>дели на два</td>
-        <td>CUPSIZE</td>
-        <td>гранж;рок</td>
-        <td>Россия</td>
-
-        <td>474537</td>
-        <td>247341</td>
-        <td>3</td>
-        <td>6</td>
-        <td>3</td>
-        <td>7</td>
-        <td>7</td>
-      </tr>
-      <tr>
-        <td>кажется, в аду прикольно, но меня выгнали б утром</td>
-        <td>CUPSIZE</td>
-        <td>гранж;рок</td>
-        <td>Россия</td>
-
-        <td>42407</td>
-        <td>335333</td>
-        <td>2</td>
-        <td>1</td>
-        <td>8</td>
-        <td>2</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>в моих легких выросли цветы</td>
-        <td>CUPSIZE</td>
-        <td>гранж;рок</td>
-        <td>Россия</td>
-
-        <td>277241</td>
-        <td>81121</td>
-        <td>0</td>
-        <td>3</td>
-        <td>8</td>
-        <td>8</td>
-        <td>9</td>
-      </tr>
-      <tr>
-        <td>неуравновешеннолетние песни pt.1</td>
-        <td>CUPSIZE</td>
-        <td>гранж;рок</td>
-        <td>Россия</td>
-
-        <td>21271</td>
-        <td>445609</td>
-        <td>7</td>
-        <td>4</td>
-        <td>4</td>
-        <td>6</td>
-        <td>4</td>
-      </tr>
-      <tr>
-        <td>заставь меня плакать</td>
-        <td>CUPSIZE</td>
-        <td>гранж;рок</td>
-        <td>Россия</td>
-
-        <td>486121</td>
-        <td>493301</td>
-        <td>9</td>
-        <td>3</td>
-        <td>5</td>
-        <td>4</td>
-        <td>2</td>
-      </tr>
-      <tr>
-        <td>последние песни про женщин</td>
-        <td>рэйчи</td>
-        <td>гранж;рок</td>
-        <td>Россия</td>
-
-        <td>165686</td>
-        <td>37354</td>
-        <td>10</td>
-        <td>0</td>
-        <td>8</td>
-        <td>2</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>ВЫСШАЯ ШКОЛА БИЗНЕСА</td>
-        <td>GRILLYAZH</td>
-        <td>поп</td>
-        <td>Россия</td>
-
-        <td>150934</td>
-        <td>483508</td>
-        <td>9</td>
-        <td>0</td>
-        <td>8</td>
-        <td>8</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>WILD EA$T</td>
-        <td>Saluki</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>209182</td>
-        <td>25176</td>
-        <td>5</td>
-        <td>4</td>
-        <td>6</td>
-        <td>6</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>BOLSHIE KURTKI</td>
-        <td>Saluki</td>
-        <td>хип-хоп;рэп</td>
-        <td>Россия</td>
-
-        <td>156107</td>
-        <td>301136</td>
-        <td>9</td>
-        <td>1</td>
-        <td>0</td>
-        <td>2</td>
-        <td>5</td>
-      </tr>
-    </tbody>
-  </table>
+  <main>
+    <h3 class="text">Чарт SoundCloud реперов</h3>
+    <details>
+      <summary class="text">График</summary>
+      <form action="#">
+        <fieldset>
+          <legend class="text">Значение по оси OX</legend>
+          <label class="text" for="artist">Артист</label>
+          <input id="artist" name="x-axis" type="radio" value="artist" />
+          <label class="text" for="genre">Жанр</label>
+          <input id="genre" name="x-axis" type="radio" value="genre" />
+          <label class="text" for="country">Страна</label>
+          <input id="country" name="x-axis" type="radio" value="country" />
+        </fieldset>
+        <fieldset>
+          <legend class="text">Значение по оси OY</legend>
+          <label class="text" for="yandex_music">Суммарно прослушиваний на Яндекс.Музыка за месяц</label>
+          <input id="yandex_music" name="y-axis" type="checkbox" value="yandex_music" />
+          <br />
+          <label class="text" for="soundcloud">Суммарно прослушиваний на SoundCloud за месяц</label>
+          <input id="soundcloud" name="y-axis" type="checkbox" value="soundcloud" />
+          <label class="text" for="average">В среднем прослушиваний за месяц</label>
+          <input id="average" name="y-axis" type="checkbox" value="average" />
+          <br />
+        </fieldset>
+        <input type="submit" value="Построить" />
+        <p class="text">Здесь будет ваш график...</p>
+      </form>
+    </details>
+    <details>
+      <summary class="text">Фильтр</summary>
+      <form action="#">
+        <p>
+          <label class="text" for="artist_filter">От Артиста: </label>
+          <input id="artist_filter" name="artist_filter" type="text" />
+        </p>
+        <p>
+          <label class="text" for="album_filter">Альбом: </label>
+          <input id="album_filter" name="album_filter" type="text" />
+        </p>
+        <p>
+          <label class="text" for="genre_filter">Жанр(-ы): </label>
+          <input id="genre_filter" name="genre_filter" type="text" />
+        </p>
+        <p>
+          <label class="text" for="country_filter">Страна: </label>
+          <input id="country_filter" name="country_filter" type="text" />
+        </p>
+        <p>
+          <label class="text" for="yandex_music_streams_from">Прослушиваний на Яндекс.Музыка от: </label>
+          <input id="yandex_music_streams_from" name="yandex_music_streams_from" type="number" />
+          <label class="text" for="yandex_music_streams_to">до: </label>
+          <input id="yandex_music_streams_to" name="yandex_music_streams_to" type="number" />
+        </p>
+        <p>
+          <label class="text" for="soundcloud_streams_from">Прослушиваний на SoundCloud от: </label>
+          <input id="soundcloud_streams_from" name="soundcloud_streams_from" type="number" />
+          <label class="text" for="soundcloud_streams_to">до: </label>
+          <input id="soundcloud_streams_to" name="soundcloud_streams_to" type="number" />
+        </p>
+        <p>
+          <label class="text" for="rhymes_images_from">Рифмы/Образы от: </label>
+          <input id="rhymes_images_from" name="rhymes_images_from" type="number" />
+          <label class="text" for="rhymes_images_to">до: </label>
+          <input id="rhymes_images_to" name="rhymes_images_to" type="number" />
+        </p>
+        <p>
+          <label class="text" for="structure_rhythmic_from">Структура/Ритмика от: </label>
+          <input id="structure_rhythmic_from" name="structure_rhythmic_from" type="number" />
+          <label class="text" for="structure_rhythmic_to">до: </label>
+          <input id="structure_rhythmic_to" name="structure_rhythmic_to" type="number" />
+        </p>
+        <p>
+          <label class="text" for="style_from">Реализация стиля от: </label>
+          <input id="style_from" name="style_from" type="number" />
+          <label class="text" for="style_to">до: </label>
+          <input id="style_to" name="style_to" type="number" />
+        </p>
+        <p>
+          <label class="text" for="uniqueness_from">Индивидуальность/Харизма от: </label>
+          <input id="uniqueness_from" name="uniqueness_from" type="number" />
+          <label class="text" for="uniqueness_to">до: </label>
+          <input id="uniqueness_to" name="uniqueness_to" type="number" />
+        </p>
+        <p>
+          <label class="text" for="vibe_from">Атмосфера/Вайб от: </label>
+          <input id="vibe_from" name="vibe_from" type="number" />
+          <label class="text" for="vibe_to">до: </label>
+          <input id="vibe_to" name="vibe_to" type="number" />
+        </p>
+        <input type="submit" value="Найти" />
+      </form>
+    </details>
+    <details>
+      <summary class="text">Сортировка</summary>
+      <form action="#">
+        <p>
+          <label class="text" for="level_1">Первый уровень: </label>
+          <select id="level_1" name="level_1">
+            <option class="text" value="level_1_no">Нет</option>
+            <option class="text" value="level_1_album">Альбом</option>
+            <option class="text" value="level_1_artist">Артист</option>
+            <option class="text" value="level_1_genre">Жанр</option>
+            <option class="text" value="level_1_country">Страна</option>
+            <option class="text" value="level_1_yandex_music_streams">Прослушиваний на Яндекс.Музыка</option>
+            <option class="text" value="level_1_soundcloud_streams">Прослушиваний на SoundCloud</option>
+            <option class="text" value="level_1_rhymes_images_option">Рифмы/Образы</option>
+            <option class="text" value="level_1_structure_rhythmic_option">Структура/Ритмика</option>
+            <option class="text" value="level_1_style_option">Реализация стиля</option>
+            <option class="text" value="level_1_uniqueness_option">Индивидуальность/Харизма</option>
+            <option class="text" value="level_1_vibe_option">Атмосфера/Вайб</option>
+          </select>
+          <label class="text" for="level_1_decreasing">По убыванию</label>
+          <input id="level_1_decreasing" name="level_1_decreasing" type="checkbox" value="level_1_decreasing" />
+        </p>
+        <p>
+          <label class="text" for="level_2">Второй уровень: </label>
+          <select id="level_2" name="level_2">
+            <option class="text" value="level_2_no">Нет</option>
+            <option class="text" value="level_2_album">Альбом</option>
+            <option class="text" value="level_2_artist">Артист</option>
+            <option class="text" value="level_2_genre">Жанр</option>
+            <option class="text" value="level_2_country">Страна</option>
+            <option class="text" value="level_2_yandex_music_streams">Прослушиваний на Яндекс.Музыка</option>
+            <option class="text" value="level_2_soundcloud_streams">Прослушиваний на SoundCloud</option>
+            <option class="text" value="level_2_rhymes_images_option">Рифмы/Образы</option>
+            <option class="text" value="level_2_structure_rhythmic_option">Структура/Ритмика</option>
+            <option class="text" value="level_2_style_option">Реализация стиля</option>
+            <option class="text" value="level_2_uniqueness_option">Индивидуальность/Харизма</option>
+            <option class="text" value="level_2_vibe_option">Атмосфера/Вайб</option>
+          </select>
+          <label class="text" for="level_2_decreasing">По убыванию</label>
+          <input id="level_2_decreasing" name="level_2_decreasing" type="checkbox" value="level_2_decreasing" />
+        </p>
+        <p>
+          <label class="text" for="level_3">Третий уровень: </label>
+          <select id="level_3" name="level_3">
+            <option class="text" value="level_3_no">Нет</option>
+            <option class="text" value="level_3_album">Альбом</option>
+            <option class="text" value="level_3_artist">Артист</option>
+            <option class="text" value="level_3_genre">Жанр</option>
+            <option class="text" value="level_3_country">Страна</option>
+            <option class="text" value="level_3_yandex_music_streams">Прослушиваний на Яндекс.Музыка</option>
+            <option class="text" value="level_3_soundcloud_streams">Прослушиваний на SoundCloud</option>
+            <option class="text" value="level_3_rhymes_images_option">Рифмы/Образы</option>
+            <option class="text" value="level_3_structure_rhythmic_option">Структура/Ритмика</option>
+            <option class="text" value="level_3_style_option">Реализация стиля</option>
+            <option class="text" value="level_3_uniqueness_option">Индивидуальность/Харизма</option>
+            <option class="text" value="level_3_vibe_option">Атмосфера/Вайб</option>
+          </select>
+          <label class="text" for="level_3_decreasing">По убыванию</label>
+          <input id="level_3_decreasing" name="level_3_decreasing" type="checkbox" value="level_3_decreasing" />
+        </p>
+        <input type="submit" value="Сортировать" />
+      </form>
+    </details>
+    <table border="1" width="100%">
+      <thead>
+        <tr>
+          <th class="text">Название альбома</th>
+          <th class="text">Артист</th>
+          <th class="text">Жанр</th>
+          <th class="text">Страна</th>
+          <th class="text">Прослушивания на Яндекс.Музыка</th>
+          <th class="text">Прослушиваний на SoundCloud</th>
+          <!-- <th colspan="5">Оценка альбома</th> -->
+          <th class="text">Рифмы/Образы</th>
+          <th class="text">Структура/Ритмика</th>
+          <th class="text">Реализация стиля</th>
+          <th class="text">Индивидуальность/харизма</th>
+          <th class="text">Атмосфера/вайб</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text">flexyswag</td>
+          <td class="text">madk1d</td>
+          <td class="text">архивкор</td>
+          <td class="text">Россия</td>
+          <td class="text">453481</td>
+          <td class="text">19849</td>
+          <td class="text">0</td>
+          <td class="text">6</td>
+          <td class="text">1</td>
+          <td class="text">0</td>
+          <td class="text">5</td>
+        </tr>
+        <tr>
+          <td class="text">Он сказал поехали!</td>
+          <td class="text">madk1d</td>
+          <td class="text">архивкор</td>
+          <td class="text">Россия</td>
+          <td class="text">150136</td>
+          <td class="text">160998</td>
+          <td class="text">6</td>
+          <td class="text">3</td>
+          <td class="text">9</td>
+          <td class="text">8</td>
+          <td class="text">8</td>
+        </tr>
+        <tr>
+          <td class="text">Мрачные треды</td>
+          <td class="text">тёмный принц</td>
+          <td class="text">архивкор</td>
+          <td class="text">Россия</td>
+          <td class="text">85185</td>
+          <td class="text">102271</td>
+          <td class="text">4</td>
+          <td class="text">3</td>
+          <td class="text">10</td>
+          <td class="text">10</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">defect (EP)</td>
+          <td class="text">greyrock</td>
+          <td class="text">архивкор</td>
+          <td class="text">Россия</td>
+          <td class="text">355803</td>
+          <td class="text">127377</td>
+          <td class="text">8</td>
+          <td class="text">3</td>
+          <td class="text">7</td>
+          <td class="text">2</td>
+          <td class="text">7</td>
+        </tr>
+        <tr>
+          <td class="text">Project n(o)va</td>
+          <td class="text">FORTUNA 812</td>
+          <td class="text">архивкор;дарк треп</td>
+          <td class="text">Россия</td>
+          <td class="text">42022</td>
+          <td class="text">480645</td>
+          <td class="text">5</td>
+          <td class="text">8</td>
+          <td class="text">1</td>
+          <td class="text">3</td>
+          <td class="text">0</td>
+        </tr>
+        <tr>
+          <td class="text">basedgod</td>
+          <td class="text">FORTUNA 812</td>
+          <td class="text">архивкор;дарк треп</td>
+          <td class="text">Россия</td>
+          <td class="text">43536</td>
+          <td class="text">32810</td>
+          <td class="text">8</td>
+          <td class="text">9</td>
+          <td class="text">9</td>
+          <td class="text">1</td>
+          <td class="text">10</td>
+        </tr>
+        <tr>
+          <td class="text">саундклауд пак</td>
+          <td class="text">урал гайсин</td>
+          <td class="text">архивкор</td>
+          <td class="text">Казахстан</td>
+          <td class="text">199560</td>
+          <td class="text">179544</td>
+          <td class="text">9</td>
+          <td class="text">3</td>
+          <td class="text">9</td>
+          <td class="text">6</td>
+          <td class="text">1</td>
+        </tr>
+        <tr>
+          <td class="text">я истекаю кровью (EP)</td>
+          <td class="text">урал гайсин</td>
+          <td class="text">архивкор</td>
+          <td class="text">Казахстан</td>
+          <td class="text">147277</td>
+          <td class="text">203764</td>
+          <td class="text">10</td>
+          <td class="text">9</td>
+          <td class="text">5</td>
+          <td class="text">2</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">GOD SYSTEM</td>
+          <td class="text">Kai Angel</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">318863</td>
+          <td class="text">55924</td>
+          <td class="text">2</td>
+          <td class="text">1</td>
+          <td class="text">10</td>
+          <td class="text">7</td>
+          <td class="text">5</td>
+        </tr>
+        <tr>
+          <td class="text">Angel May Cry 2</td>
+          <td class="text">Kai Angel</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">361752</td>
+          <td class="text">377397</td>
+          <td class="text">9</td>
+          <td class="text">4</td>
+          <td class="text">0</td>
+          <td class="text">2</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">Angel May Cry</td>
+          <td class="text">Kai Angel</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">128695</td>
+          <td class="text">44076</td>
+          <td class="text">8</td>
+          <td class="text">4</td>
+          <td class="text">6</td>
+          <td class="text">2</td>
+          <td class="text">8</td>
+        </tr>
+        <tr>
+          <td class="text">damage</td>
+          <td class="text">Kai Angel</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">117928</td>
+          <td class="text">491884</td>
+          <td class="text">1</td>
+          <td class="text">7</td>
+          <td class="text">6</td>
+          <td class="text">5</td>
+          <td class="text">0</td>
+        </tr>
+        <tr>
+          <td class="text">immortal</td>
+          <td class="text">Kai Angel</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">281762</td>
+          <td class="text">447440</td>
+          <td class="text">8</td>
+          <td class="text">4</td>
+          <td class="text">4</td>
+          <td class="text">6</td>
+          <td class="text">5</td>
+        </tr>
+        <tr>
+          <td class="text">MARILYN MANSON</td>
+          <td class="text">Kai Angel</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">169641</td>
+          <td class="text">96498</td>
+          <td class="text">1</td>
+          <td class="text">10</td>
+          <td class="text">10</td>
+          <td class="text">5</td>
+          <td class="text">8</td>
+        </tr>
+        <tr>
+          <td class="text">kAiCoRe</td>
+          <td class="text">Kai Angel</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">170396</td>
+          <td class="text">331501</td>
+          <td class="text">2</td>
+          <td class="text">10</td>
+          <td class="text">5</td>
+          <td class="text">0</td>
+          <td class="text">5</td>
+        </tr>
+        <tr>
+          <td class="text">Heavy Metal 2</td>
+          <td class="text">Kai Angel &amp; 9mice</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">312133</td>
+          <td class="text">81614</td>
+          <td class="text">2</td>
+          <td class="text">10</td>
+          <td class="text">6</td>
+          <td class="text">9</td>
+          <td class="text">3</td>
+        </tr>
+        <tr>
+          <td class="text">Heavy Metal</td>
+          <td class="text">Kai Angel &amp; 9mice</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">221762</td>
+          <td class="text">71701</td>
+          <td class="text">7</td>
+          <td class="text">0</td>
+          <td class="text">10</td>
+          <td class="text">5</td>
+          <td class="text">10</td>
+        </tr>
+        <tr>
+          <td class="text">ORPHEUS</td>
+          <td class="text">9mice</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">98436</td>
+          <td class="text">312677</td>
+          <td class="text">3</td>
+          <td class="text">9</td>
+          <td class="text">5</td>
+          <td class="text">10</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">ASPHALT</td>
+          <td class="text">9mice</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">49991</td>
+          <td class="text">28791</td>
+          <td class="text">8</td>
+          <td class="text">1</td>
+          <td class="text">3</td>
+          <td class="text">5</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">9MM</td>
+          <td class="text">9mice</td>
+          <td class="text">viperr;opium</td>
+          <td class="text">США</td>
+          <td class="text">204353</td>
+          <td class="text">381481</td>
+          <td class="text">3</td>
+          <td class="text">1</td>
+          <td class="text">9</td>
+          <td class="text">0</td>
+          <td class="text">5</td>
+        </tr>
+        <tr>
+          <td class="text">Fluddality</td>
+          <td class="text">GONE.Fludd</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">347773</td>
+          <td class="text">477934</td>
+          <td class="text">0</td>
+          <td class="text">7</td>
+          <td class="text">1</td>
+          <td class="text">3</td>
+          <td class="text">9</td>
+        </tr>
+        <tr>
+          <td class="text">BOYS DON’T CRY</td>
+          <td class="text">GONE.Fludd</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">46492</td>
+          <td class="text">255316</td>
+          <td class="text">6</td>
+          <td class="text">5</td>
+          <td class="text">1</td>
+          <td class="text">5</td>
+          <td class="text">10</td>
+        </tr>
+        <tr>
+          <td class="text">СУПЕРЧУИТС</td>
+          <td class="text">GONE.Fludd</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">191387</td>
+          <td class="text">292274</td>
+          <td class="text">7</td>
+          <td class="text">0</td>
+          <td class="text">9</td>
+          <td class="text">1</td>
+          <td class="text">1</td>
+        </tr>
+        <tr>
+          <td class="text">VOODOO CHILD</td>
+          <td class="text">GONE.Fludd</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">399455</td>
+          <td class="text">110761</td>
+          <td class="text">4</td>
+          <td class="text">0</td>
+          <td class="text">9</td>
+          <td class="text">1</td>
+          <td class="text">9</td>
+        </tr>
+        <tr>
+          <td class="text">DIGITAL FANTAZY</td>
+          <td class="text">GONE.Fludd</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">334482</td>
+          <td class="text">126117</td>
+          <td class="text">8</td>
+          <td class="text">8</td>
+          <td class="text">2</td>
+          <td class="text">1</td>
+          <td class="text">7</td>
+        </tr>
+        <tr>
+          <td class="text">Pink Phloyd</td>
+          <td class="text">Pharaoh</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">489973</td>
+          <td class="text">300887</td>
+          <td class="text">1</td>
+          <td class="text">3</td>
+          <td class="text">8</td>
+          <td class="text">7</td>
+          <td class="text">4</td>
+        </tr>
+        <tr>
+          <td class="text">Плакшери</td>
+          <td class="text">Pharaoh</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">116558</td>
+          <td class="text">468148</td>
+          <td class="text">7</td>
+          <td class="text">4</td>
+          <td class="text">7</td>
+          <td class="text">7</td>
+          <td class="text">3</td>
+        </tr>
+        <tr>
+          <td class="text">Платина</td>
+          <td class="text">Платина</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">25115</td>
+          <td class="text">303392</td>
+          <td class="text">8</td>
+          <td class="text">3</td>
+          <td class="text">7</td>
+          <td class="text">9</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">Опиаты Круг</td>
+          <td class="text">Платина</td>
+          <td class="text">хип-хоп;рэп;рнб</td>
+          <td class="text">Россия</td>
+          <td class="text">276927</td>
+          <td class="text">235798</td>
+          <td class="text">7</td>
+          <td class="text">3</td>
+          <td class="text">7</td>
+          <td class="text">5</td>
+          <td class="text">6</td>
+        </tr>
+        <tr>
+          <td class="text">Sosa Muzik</td>
+          <td class="text">Платина</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">15088</td>
+          <td class="text">199335</td>
+          <td class="text">7</td>
+          <td class="text">4</td>
+          <td class="text">8</td>
+          <td class="text">4</td>
+          <td class="text">7</td>
+        </tr>
+        <tr>
+          <td class="text">Сладких снов</td>
+          <td class="text">Платина</td>
+          <td class="text">хип-хоп;рэп;рнб</td>
+          <td class="text">Россия</td>
+          <td class="text">25307</td>
+          <td class="text">34026</td>
+          <td class="text">10</td>
+          <td class="text">2</td>
+          <td class="text">0</td>
+          <td class="text">2</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">РНБ КЛУБ</td>
+          <td class="text">Платина</td>
+          <td class="text">хип-хоп;рэп;рнб</td>
+          <td class="text">Россия</td>
+          <td class="text">255099</td>
+          <td class="text">86811</td>
+          <td class="text">2</td>
+          <td class="text">8</td>
+          <td class="text">2</td>
+          <td class="text">7</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">Классика</td>
+          <td class="text">Джон Гарик</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">24776</td>
+          <td class="text">487448</td>
+          <td class="text">1</td>
+          <td class="text">8</td>
+          <td class="text">0</td>
+          <td class="text">8</td>
+          <td class="text">6</td>
+        </tr>
+        <tr>
+          <td class="text">Шансун</td>
+          <td class="text">Джон Гарик</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">333580</td>
+          <td class="text">40038</td>
+          <td class="text">7</td>
+          <td class="text">0</td>
+          <td class="text">3</td>
+          <td class="text">4</td>
+          <td class="text">4</td>
+        </tr>
+        <tr>
+          <td class="text">Ядик</td>
+          <td class="text">Джон Гарик</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">45149</td>
+          <td class="text">448389</td>
+          <td class="text">4</td>
+          <td class="text">3</td>
+          <td class="text">10</td>
+          <td class="text">5</td>
+          <td class="text">6</td>
+        </tr>
+        <tr>
+          <td class="text">Never Broke Again</td>
+          <td class="text">xxxmanera</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">440657</td>
+          <td class="text">206481</td>
+          <td class="text">10</td>
+          <td class="text">10</td>
+          <td class="text">4</td>
+          <td class="text">4</td>
+          <td class="text">4</td>
+        </tr>
+        <tr>
+          <td class="text">HUNNID: GATEKEEPING</td>
+          <td class="text">xxxmanera</td>
+          <td class="text">хип-хоп;рэп;rage</td>
+          <td class="text">Россия</td>
+          <td class="text">182407</td>
+          <td class="text">325111</td>
+          <td class="text">5</td>
+          <td class="text">0</td>
+          <td class="text">5</td>
+          <td class="text">5</td>
+          <td class="text">7</td>
+        </tr>
+        <tr>
+          <td class="text">exxxtract vol. 1</td>
+          <td class="text">xxxmanera</td>
+          <td class="text">хип-хоп;рэп;rage</td>
+          <td class="text">Россия</td>
+          <td class="text">232476</td>
+          <td class="text">381281</td>
+          <td class="text">3</td>
+          <td class="text">8</td>
+          <td class="text">10</td>
+          <td class="text">4</td>
+          <td class="text">0</td>
+        </tr>
+        <tr>
+          <td class="text">Project V</td>
+          <td class="text">Voskresenskii</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">486839</td>
+          <td class="text">125536</td>
+          <td class="text">1</td>
+          <td class="text">3</td>
+          <td class="text">4</td>
+          <td class="text">4</td>
+          <td class="text">7</td>
+        </tr>
+        <tr>
+          <td class="text">Как испортить вечеринку?</td>
+          <td class="text">CUPSIZE</td>
+          <td class="text">гранж;рок</td>
+          <td class="text">Россия</td>
+          <td class="text">418420</td>
+          <td class="text">493171</td>
+          <td class="text">2</td>
+          <td class="text">4</td>
+          <td class="text">10</td>
+          <td class="text">3</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">… меня малышка</td>
+          <td class="text">CUPSIZE</td>
+          <td class="text">гранж;рок;hyperpop</td>
+          <td class="text">Россия</td>
+          <td class="text">327495</td>
+          <td class="text">171425</td>
+          <td class="text">8</td>
+          <td class="text">10</td>
+          <td class="text">8</td>
+          <td class="text">10</td>
+          <td class="text">6</td>
+        </tr>
+        <tr>
+          <td class="text">дели на два</td>
+          <td class="text">CUPSIZE</td>
+          <td class="text">гранж;рок</td>
+          <td class="text">Россия</td>
+          <td class="text">474537</td>
+          <td class="text">247341</td>
+          <td class="text">3</td>
+          <td class="text">6</td>
+          <td class="text">3</td>
+          <td class="text">7</td>
+          <td class="text">7</td>
+        </tr>
+        <tr>
+          <td class="text">кажется, в аду прикольно, но меня выгнали б утром</td>
+          <td class="text">CUPSIZE</td>
+          <td class="text">гранж;рок</td>
+          <td class="text">Россия</td>
+          <td class="text">42407</td>
+          <td class="text">335333</td>
+          <td class="text">2</td>
+          <td class="text">1</td>
+          <td class="text">8</td>
+          <td class="text">2</td>
+          <td class="text">1</td>
+        </tr>
+        <tr>
+          <td class="text">в моих легких выросли цветы</td>
+          <td class="text">CUPSIZE</td>
+          <td class="text">гранж;рок</td>
+          <td class="text">Россия</td>
+          <td class="text">277241</td>
+          <td class="text">81121</td>
+          <td class="text">0</td>
+          <td class="text">3</td>
+          <td class="text">8</td>
+          <td class="text">8</td>
+          <td class="text">9</td>
+        </tr>
+        <tr>
+          <td class="text">неуравновешеннолетние песни pt.1</td>
+          <td class="text">CUPSIZE</td>
+          <td class="text">гранж;рок</td>
+          <td class="text">Россия</td>
+          <td class="text">21271</td>
+          <td class="text">445609</td>
+          <td class="text">7</td>
+          <td class="text">4</td>
+          <td class="text">4</td>
+          <td class="text">6</td>
+          <td class="text">4</td>
+        </tr>
+        <tr>
+          <td class="text">заставь меня плакать</td>
+          <td class="text">CUPSIZE</td>
+          <td class="text">гранж;рок</td>
+          <td class="text">Россия</td>
+          <td class="text">486121</td>
+          <td class="text">493301</td>
+          <td class="text">9</td>
+          <td class="text">3</td>
+          <td class="text">5</td>
+          <td class="text">4</td>
+          <td class="text">2</td>
+        </tr>
+        <tr>
+          <td class="text">последние песни про женщин</td>
+          <td class="text">рэйчи</td>
+          <td class="text">гранж;рок</td>
+          <td class="text">Россия</td>
+          <td class="text">165686</td>
+          <td class="text">37354</td>
+          <td class="text">10</td>
+          <td class="text">0</td>
+          <td class="text">8</td>
+          <td class="text">2</td>
+          <td class="text">10</td>
+        </tr>
+        <tr>
+          <td class="text">ВЫСШАЯ ШКОЛА БИЗНЕСА</td>
+          <td class="text">GRILLYAZH</td>
+          <td class="text">поп</td>
+          <td class="text">Россия</td>
+          <td class="text">150934</td>
+          <td class="text">483508</td>
+          <td class="text">9</td>
+          <td class="text">0</td>
+          <td class="text">8</td>
+          <td class="text">8</td>
+          <td class="text">8</td>
+        </tr>
+        <tr>
+          <td class="text">WILD EA$T</td>
+          <td class="text">Saluki</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">209182</td>
+          <td class="text">25176</td>
+          <td class="text">5</td>
+          <td class="text">4</td>
+          <td class="text">6</td>
+          <td class="text">6</td>
+          <td class="text">5</td>
+        </tr>
+        <tr>
+          <td class="text">BOLSHIE KURTKI</td>
+          <td class="text">Saluki</td>
+          <td class="text">хип-хоп;рэп</td>
+          <td class="text">Россия</td>
+          <td class="text">156107</td>
+          <td class="text">301136</td>
+          <td class="text">9</td>
+          <td class="text">1</td>
+          <td class="text">0</td>
+          <td class="text">2</td>
+          <td class="text">5</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p class="text">
+      выполнил: Кон Владислав (группа: Б9123-09.03.04(1))
+    </p>
+
+    <p class="text">
+      год разработки: 2025
+    </p>
+  </footer>
 </body>
 
 </html>

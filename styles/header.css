@@ -3,6 +3,7 @@ header {
     overflow: hidden;
     position:sticky;
     top:0;
+    margin-bottom:30px;
 }
 
 header a {
@@ -16,6 +17,10 @@ header > * {
 
 header > nav {
     float: right;
+}
+
+header > nav>h2.text.nav-item {
+    font-weight:normal;
 }
 
 header .header-text {
