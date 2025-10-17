@@ -4,36 +4,51 @@ div#gallery-wrapper {
     margin: 0 auto 40px;
 }
 
-div#gallery-wrapper>.gallery-invisible-item {
-    float: left;
-    /* display: none; */
-    width: 6.25%;
-    visibility: hidden;
+div#gallery-wrapper>img, div#gallery-wrapper>div#ver {
+    float:left;
+    width:33.3333333333%;
 }
 
 div#gallery-wrapper>img {
-    float: left;
-    width: 35%;
+    /* height:300px; */
+}
+/* 
+div#gallery-wrapper>img#gallery-image-3, div#gallery-wrapper>img#gallery-image-4 {
+    height: 150px;
+}
+
+div#gallery-wrapper>img#gallery-image-4 {
+    clear:right;
+} */
+
+/* div#gallery-wrapper>div#horizontal-artists-images-wrapper {
+    float:left;
+    width: 66.6666666666666666%;
+    overflow:hidden;
+}
+
+div#gallery-wrapper>div#horizontal-artists-images-wrapper>img {
+    float:left;
+    width: calc(50% - 2px);
     border-right:2px solid #f27022;
-    border-bottom:2px solid #f27022;
 }
 
 div#gallery-wrapper>div#vertical-artists-images-wrapper {
-    /* height: 441.36px; */
-}
-
-div#gallery-wrapper>div#vertical-artists-images-wrapper>img#gallery-image-3, div#gallery-wrapper>div#vertical-artists-images-wrapper>img#gallery-image-4 {
-    height:50%;
-}
-
-div#gallery-wrapper>div#vertical-artists-images-wrapper {
-    float: left;
-    width: calc(17.5% - 2px);
-    width: 30%; 
+    width: 33.3333333333333333%;
+    float:left;
+    overflow: hidden;
 }
 
 div#gallery-wrapper>div#vertical-artists-images-wrapper>img {
-    display: block;
+    display:block;
     width:100%;
-    border-bottom: 2px solid #f27022;
+    height:50%;
 }
+
+div#gallery-wrapper>div#vertical-artists-images-wrapper>img#gallery-image-3 {
+    float:left;
+}
+
+div#gallery-wrapper>div#vertical-artists-images-wrapper>img#gallery-image-4 {
+    clear:both;
+} */
