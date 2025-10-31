@@ -98,7 +98,7 @@ div.center-wrapper>div#top-short-wrapper>h3 {
 }
 
 div.center-wrapper>div#top-short-wrapper>table {
-    width:100%;
+    /* width:100%; */
     overflow: auto;
     border-collapse: collapse;
     margin-bottom:20px;

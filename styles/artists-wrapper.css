@@ -1,0 +1,155 @@
+div#artists-info-wrapper-updated>div#artists-info-wrapper-top {
+    margin-bottom:10px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
+
+div#artists-info-wrapper-updated>div#artists-info-wrapper-top>*{
+    display:flex;
+    flex-flow:row nowrap;
+    gap:20px;
+    width: 40%;
+}
+
+div#artists-info-wrapper-updated>div#artists-info-wrapper-top>div#artists-info-wrapper-top-left-part>div.artist-info-wrapper:first-child {
+    /* flex-basis:1; */
+    width:30%;
+    /* background-color: red; */
+}
+div#artists-info-wrapper-updated>div#artists-info-wrapper-top>div#artists-info-wrapper-top-left-part>div.artist-info-wrapper:last-child {
+    /* flex-grow:2; */
+    width:70%;
+}
+
+div#artists-info-wrapper-updated>div#artists-info-wrapper-top>div#artists-info-wrapper-top-right-part>div.artist-info-wrapper:first-child {
+    /* flex-basis:1; */
+    width:30%;
+    /* background-color:red; */
+}
+div#artists-info-wrapper-updated>div#artists-info-wrapper-top>div#artists-info-wrapper-top-right-part>div.artist-info-wrapper:last-child {
+    /* flex-grow:2; */
+    width:70%;
+}
+
+div#artists-info-wrapper-updated>div#artists-info-wrapper-top img.artist-album-cover {
+    display:inline-block;
+    max-width:100px;
+    /* max-height:120px; */
+}
+
+div#artists-info-wrapper-updated>div#artists-info-wrapper-top div.artist-info-wrapper {
+    padding:8px;
+    border-radius:10px;
+    background-color:#1e2133;
+    display:flex;
+    flex-flow:column wrap;
+    gap: 10px;
+    align-items:center;
+}
+
+div#artists-info-wrapper-updated div.artist-info-wrapper .text {
+    display:inline-block;
+    text-align: center;
+    width:100%;
+}
+
+/* asdlkja;sd */
+div#artists-info-wrapper-main {
+    display:flex;
+    flex-flow:row nowrap;
+    gap:20px;
+    align-items:flex-end;
+}
+
+div#artists-info-wrapper-main>div.artist-info-wrapper-center {
+    display:flex;
+    flex-flow:column wrap;
+    gap:20px;
+    align-items:stretch;
+}
+
+div#artists-info-wrapper-main>div.artist-info-wrapper-center>div.artist-image-block>img {
+    display:inline-block;
+    height:300px;
+    width:100%;
+}
+
+div.artist-image-block img {
+    object-fit:cover;
+}
+
+@media only screen and (max-width: 1221px) {
+    div#artists-info-wrapper-updated>div#artists-info-wrapper-top img.artist-album-cover {
+        max-width:80px;
+        /* max-height:120px; */
+    }
+    div#artists-info-wrapper-updated .text {
+        font-size:0.8rem;
+    }
+
+    div#artists-info-wrapper-updated>div#artists-info-wrapper-top>div#artists-info-wrapper-top-left-part>div.artist-info-wrapper:first-child {
+        /* flex-basis:1; */
+        width:40%;
+        /* background-color: red; */
+    }
+    div#artists-info-wrapper-updated>div#artists-info-wrapper-top>div#artists-info-wrapper-top-left-part>div.artist-info-wrapper:last-child {
+        /* flex-grow:2; */
+        width:60%;
+    }
+    
+    div#artists-info-wrapper-updated>div#artists-info-wrapper-top>div#artists-info-wrapper-top-right-part>div.artist-info-wrapper:first-child {
+        /* flex-basis:1; */
+        width:40%;
+        /* background-color:red; */
+    }
+    div#artists-info-wrapper-updated>div#artists-info-wrapper-top>div#artists-info-wrapper-top-right-part>div.artist-info-wrapper:last-child {
+        /* flex-grow:2; */
+        width:60%;
+    }
+}
+
+@media only screen and (max-width: 888px) {
+    main {
+        width: 100%;
+    }
+
+    header>nav {
+        width:50%;
+        float:right;
+        clear:both;
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        /* justify-items:end; */
+        justify-content:end;
+    }
+
+    div#gallery-wrapper {
+        display:flex;
+        flex-flow:column;
+        align-items:center;
+    }
+
+    div#artists-info-wrapper-updated>div#artists-info-wrapper-top {
+        flex-flow:column wrap;
+        gap:20px;
+        align-items:center;
+        margin-bottom:100px;
+    }
+
+    div#artists-info-wrapper-updated>div#artists-info-wrapper-top>* {
+        flex-flow:column wrap;
+        align-items:center;
+    }
+
+    div#artists-info-wrapper-updated>div#artists-info-wrapper-top div.artist-info-wrapper {
+        flex:none;
+        width: 70% !important;
+    }
+
+    div#artists-info-wrapper-main {
+        flex-flow:column wrap;
+        /* justify-content:center; */
+        align-items:center;
+    }
+}
